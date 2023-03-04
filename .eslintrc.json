@@ -7,7 +7,7 @@
     "sourceType": "module",
     "project": "./tsconfig.*?.json"
   },
-  "plugins": ["@typescript-eslint", "@nrwl/nx", "prettier", "no-only-tests"],
+  "plugins": ["@typescript-eslint", "prettier"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -42,21 +42,7 @@
         ],
         "@typescript-eslint/no-useless-constructor": "error",
         "no-console": "warn",
-        "curly": ["error"],
-        "eqeqeq": "error",
-        "@nrwl/nx/enforce-module-boundaries": [
-          "off",
-          {
-            "enforceBuildableLibDependency": true,
-            "allow": [],
-            "depConstraints": [
-              {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
-              }
-            ]
-          }
-        ]
+        "curly": ["error"]
       }
     }
   ]
