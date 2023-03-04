@@ -1,8 +1,8 @@
 export const likes = (a: string[]): string => {
-  if (a.length === 0) {
-    return 'no one likes this';
-  }
   switch (a.length) {
+    case 0:
+      return 'no one likes this';
+
     case 1:
       return `${a[0]} likes this`;
 
