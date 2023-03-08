@@ -1,3 +1,4 @@
+import { UnitTests } from '../../CustomAssertLibrary/assertions';
 export const likes = (a: string[]): string => {
   switch (a.length) {
     case 0:
@@ -16,3 +17,4 @@ export const likes = (a: string[]): string => {
       return `${a[0]}, ${a[1]} and ${a.length - 2} others like this`;
   }
 };
+console.log(UnitTests.strictEqual(likes(['Tom', 'Hak', 'Konrad']), 'Tom, Hak and Konrad like this'));
