@@ -1,3 +1,4 @@
+import { UnitTests } from '../../CustomAssertLibrary/assertions';
 export function foldArray(array: number[], runs: number): number[] {
   for (let index = 0; index < runs; index++) {
     doStuff(array);
@@ -25,5 +26,4 @@ function doStuff(array: number[]) {
     console.log('---------------------');
   });
 }
-
-console.log(foldArray([1, 2, 3, 4, 5], 2)); //[9,6]
+console.log(UnitTests.strictEqual(foldArray([1, 2, 3, 4, 5], 2), [9, 6]));
