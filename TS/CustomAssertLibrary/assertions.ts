@@ -3,7 +3,11 @@ export class UnitTests {
 
   static strictEqual(input: any, expect: any) {
     if (input !== expect) {
-      console.log(`🟥 input: ${input} is different than expected: ${expect}`);
+      if (typeof input === 'object') {
+        console.log(`🟥 actual: ${JSON.stringify(input)} is different than expected: ${expect}`);
+        return false;
+      }
+      console.log(`🟥 actual: ${input} is different than expected: ${expect}`);
       return false;
     } else {
       console.log('🟩 Success');

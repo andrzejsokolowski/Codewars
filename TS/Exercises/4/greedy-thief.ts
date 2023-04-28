@@ -1,3 +1,5 @@
+import { UnitTests } from '../../CustomAssertLibrary/assertions';
+
 function greedyThief(items, maxWeight) {
   let result = [];
 
@@ -34,15 +36,23 @@ function greedyThief(items, maxWeight) {
 }
 
 console.log(
-  greedyThief(
+  UnitTests.strictEqual(
+    greedyThief(
+      [
+        { weight: 0, price: 1 },
+        { weight: 2, price: 6 },
+        { weight: 2, price: 3 },
+        { weight: 6, price: 5 },
+        { weight: 5, price: 4 },
+        { weight: 4, price: 6 },
+      ],
+      10
+    ),
     [
       { weight: 0, price: 1 },
-      { weight: 2, price: 6 },
-      { weight: 2, price: 3 },
-      { weight: 6, price: 5 },
-      { weight: 5, price: 4 },
       { weight: 4, price: 6 },
-    ],
-    10
+      { weight: 2, price: 3 },
+      { weight: 2, price: 6 },
+    ]
   )
 );
