@@ -6,7 +6,10 @@
 # Note: You cannot see into any of the boxes
 
 # Author's note:
-# This question is different from the standard bertrand's box paradox - It posits that a gold ball WAS selected.
+# This question is different from the standard bertrand's box paradox - It posits that a gold ball WAS ALREADY selected.
+# Using this, we can simplify the probability - you either chose the g-g box, or the g-s box.
+# Since the experiment STARTS from this process, it is a pure 50/50 - you either chose box 1, or box 2. 
+# No additional math is required
 # This, of course, means that you did not pick box 3, so we may remove it from the equation
 import random
 boxes = [['G', 'G'], ['G', 'S']]
